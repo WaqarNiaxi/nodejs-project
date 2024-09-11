@@ -1,10 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors'); // Import cors
 const app = express();
 const port = 3002; // Changed port to avoid conflict
 
 // Middleware to parse JSON
 app.use(express.json());
+
+// Use CORS middleware
+app.use(cors()); // Allow all origins for now
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://waqar:niazi@cluster0.zbxho.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
