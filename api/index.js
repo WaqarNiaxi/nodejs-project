@@ -30,8 +30,8 @@ const Item = mongoose.model('Item', itemSchema);
 app.post('/items', async (req, res) => {
   try {
     const item = new Item({
-      name: req.body.name,
-      description: req.body.description,
+      title: req.body.title,
+      content: req.body.content,
     });
     const result = await item.save();
     res.status(201).send(result);
