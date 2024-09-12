@@ -17,8 +17,9 @@ mongoose.connect('mongodb+srv://waqar:niazi@cluster0.zbxho.mongodb.net/?retryWri
 
 // Define a schema and model
 const itemSchema = new mongoose.Schema({
-  name: String,
-  description: String,
+  title: String,
+  content: String,
+  author: String,
 });
 
 const Item = mongoose.model('Item', itemSchema);
